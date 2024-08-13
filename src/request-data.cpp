@@ -483,17 +483,17 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		}
 	} else if (request_data->output_type == "Key-Value") {
 		response = parse_key_value(response, request_data);
-	} else if (request_data->output_type == "XML (XPath)") {
+	} else if (request_data->output_type == "XML(XPath)") {
 		response = parse_xml(response, request_data);
-	} else if (request_data->output_type == "XML (XQuery)") {
+	} else if (request_data->output_type == "XML(XQuery)") {
 		response = parse_xml_by_xquery(response, request_data);
 	} else if (request_data->output_type == "HTML") {
 		response = parse_html(response, request_data);
-	} else if (request_data->output_type == "Text") {
+	} else if (request_data->output_type == "文本") {
 		response = parse_regex(response, request_data);
-	} else if (request_data->output_type == "Image (data)") {
+	} else if (request_data->output_type == "图像(数据)") {
 		response = parse_image_data(response, request_data);
-	} else if (request_data->output_type == "Audio (data)") {
+	} else if (request_data->output_type == "音频(数据)") {
 		response = parse_audio_data(response, request_data);
 	} else {
 		obs_log(LOG_INFO, "Invalid output type");

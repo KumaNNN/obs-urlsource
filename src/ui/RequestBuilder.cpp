@@ -103,7 +103,7 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 {
 	ui->setupUi(this);
 
-	setWindowTitle("HTTP Request Builder");
+	setWindowTitle("HTTP 请求构建器");
 	// Make modal
 	setModal(true);
 
@@ -421,7 +421,7 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 						true);
 			set_form_row_visibility(ui->formOutputParsing, ui->postProcessRegexLineEdit,
 						true);
-		} else if (ui->outputTypeComboBox->currentText() == "Text") {
+		} else if (ui->outputTypeComboBox->currentText() == "文本") {
 			set_form_row_visibility(ui->formOutputParsing, ui->outputRegexLineEdit,
 						true);
 			set_form_row_visibility(ui->formOutputParsing, ui->outputRegexFlagsLineEdit,
@@ -539,7 +539,7 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 
 		// disable the send button
 		ui->sendButton->setEnabled(false);
-		ui->sendButton->setText("Sending...");
+		ui->sendButton->setText("发送中...");
 
 		// Create a thread to send the request to prevent the UI from hanging
 		std::thread request_data_handler_thread([this, saveSettingsToRequestData]() {
@@ -599,7 +599,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 
 	// Display the response
 	QDialog *responseDialog = new QDialog(this);
-	responseDialog->setWindowTitle("Response");
+	responseDialog->setWindowTitle("响应");
 	QVBoxLayout *responseLayout = new QVBoxLayout;
 	responseDialog->setLayout(responseLayout);
 	responseDialog->setMinimumWidth(500);
@@ -609,7 +609,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 	responseDialog->setModal(true);
 
 	// show request URL
-	QGroupBox *requestGroupBox = new QGroupBox("Request");
+	QGroupBox *requestGroupBox = new QGroupBox("请求");
 	responseLayout->addWidget(requestGroupBox);
 	QVBoxLayout *requestLayout = new QVBoxLayout;
 	requestGroupBox->setLayout(requestLayout);
@@ -620,7 +620,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 
 	// if there's a request body, add it to the dialog
 	if (response.request_body != "") {
-		QGroupBox *requestBodyGroupBox = new QGroupBox("Request Body");
+		QGroupBox *requestBodyGroupBox = new QGroupBox("请求主体");
 		responseLayout->addWidget(requestBodyGroupBox);
 		QVBoxLayout *requestBodyLayout = new QVBoxLayout;
 		requestBodyGroupBox->setLayout(requestBodyLayout);
@@ -640,7 +640,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 	}
 
 	if (!response.body.empty()) {
-		QGroupBox *responseBodyGroupBox = new QGroupBox("Response Body");
+		QGroupBox *responseBodyGroupBox = new QGroupBox("响应主体");
 		responseBodyGroupBox->setLayout(new QVBoxLayout);
 		// Add scroll area for the response body
 		QScrollArea *responseBodyScrollArea = new QScrollArea;
@@ -662,7 +662,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 
 	// If there's a parsed output, add it to the dialog in a QGroupBox
 	if (response.body_parts_parsed.size() > 0 && response.body_parts_parsed[0] != "") {
-		QGroupBox *parsedOutputGroupBox = new QGroupBox("Parsed Output");
+		QGroupBox *parsedOutputGroupBox = new QGroupBox("解析输出");
 		responseLayout->addWidget(parsedOutputGroupBox);
 		QVBoxLayout *parsedOutputLayout = new QVBoxLayout;
 		parsedOutputGroupBox->setLayout(parsedOutputLayout);

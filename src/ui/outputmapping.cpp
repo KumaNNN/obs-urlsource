@@ -25,8 +25,8 @@ OutputMapping::OutputMapping(const output_mapping_data &mapping_data_in,
 {
 	ui->setupUi(this);
 
-	model.setHorizontalHeaderLabels(QStringList() << "Mapping Name"
-						      << "Output");
+	model.setHorizontalHeaderLabels(QStringList() << "映射名称"
+						      << "输出");
 	ui->tableView->setModel(&model);
 	ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 

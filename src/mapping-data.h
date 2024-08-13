@@ -6,8 +6,8 @@
 
 #include <nlohmann/json.hpp>
 
-const std::string none_internal_rendering = "None / Internal rendering";
-const std::string save_to_setting = "Save to source settings";
+const std::string none_internal_rendering = "无/内部渲染";
+const std::string save_to_setting = "保存到当前插件设置中";
 
 struct output_mapping {
 	std::string name;

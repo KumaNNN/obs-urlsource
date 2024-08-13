@@ -159,7 +159,7 @@ inja引擎处理的模板&lt;br/&gt;
    <item>
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;了解更多关于 &lt;a href=&quot;https://doc.qt.io/qt-6/richtext-html-subset.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;支持的HTML和CSS&lt;/span&gt;&lt;/a&gt;, and &lt;a href=&quot;https://github.com/pantor/inja&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;以及等高级模板&lt;/span&gt;&lt;/a&gt; 功能的信息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;了解更多关于 &lt;a href=&quot;https://doc.qt.io/qt-6/richtext-html-subset.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;支持的HTML和CSS&lt;/span&gt;&lt;/a&gt;, 和 &lt;a href=&quot;https://github.com/pantor/inja&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;高级模板&lt;/span&gt;&lt;/a&gt; 功能的信息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
