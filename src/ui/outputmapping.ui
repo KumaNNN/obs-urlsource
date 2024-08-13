@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Output Mapping</string>
+   <string>输出映射</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -20,7 +20,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Map Request Data to Output (e.g source)</string>
+      <string>将请求数据映射到输出(如 源)</string>
      </property>
     </widget>
    </item>
@@ -91,14 +91,14 @@
     <widget class="QLabel" name="label">
      <property name="toolTip">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-Template processed by inja engine&lt;br/&gt;
-Use {{output}} for text representation of a single object/string&lt;br/&gt;
-Use {{outputN}}, where N is index of item starting at 0, for text representation of parts of an array (see Test Request button)&lt;br/&gt;
-Use {{body}} variable for unparsed object/array representation of the entire response
+inja引擎处理的模板&lt;br/&gt;
+使用 {{output}} 表示单个对象/字符串的文本&lt;br/&gt;
+使用 {{outputN}}, 其中N是从0开始的项的索引，用于数组各部分的文本表示(见 测试请求 按钮)&lt;br/&gt;
+使用 {{body}} 变量表示整个响应的未解析对象/数组
 &lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
-      <string>Output Template and CSS</string>
+      <string>输出模板和CSS</string>
      </property>
     </widget>
    </item>
@@ -126,7 +126,7 @@ Use {{body}} variable for unparsed object/array representation of the entire res
          <string/>
         </property>
         <property name="placeholderText">
-         <string>Select a mapping above</string>
+         <string>选择上面的映射</string>
         </property>
        </widget>
       </item>
@@ -139,7 +139,7 @@ Use {{body}} variable for unparsed object/array representation of the entire res
          <string/>
         </property>
         <property name="placeholderText">
-         <string>Select a mapping above</string>
+         <string>选择上面的映射</string>
         </property>
        </widget>
       </item>
@@ -152,14 +152,14 @@ Use {{body}} variable for unparsed object/array representation of the entire res
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Unhide output source on update</string>
+      <string>更新时取消隐藏输出源</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Learn More about &lt;a href=&quot;https://doc.qt.io/qt-6/richtext-html-subset.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;supported HTML and CSS&lt;/span&gt;&lt;/a&gt;, and &lt;a href=&quot;https://github.com/pantor/inja&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;advanced templating&lt;/span&gt;&lt;/a&gt; functions like loops.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;了解更多关于 &lt;a href=&quot;https://doc.qt.io/qt-6/richtext-html-subset.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;支持的HTML和CSS&lt;/span&gt;&lt;/a&gt;, and &lt;a href=&quot;https://github.com/pantor/inja&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;以及等高级模板&lt;/span&gt;&lt;/a&gt; 功能的信息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>

@@ -29,7 +29,7 @@ struct request_data_handler_response parse_xml(struct request_data_handler_respo
 			obs_log(LOG_INFO, "Failed to get XML value");
 			// Return an error response
 			struct request_data_handler_response responseFail;
-			responseFail.error_message = "Failed to get XML value";
+			responseFail.error_message = "获取XML值失败";
 			responseFail.status_code = URL_SOURCE_REQUEST_PARSING_ERROR_CODE;
 			return responseFail;
 		}

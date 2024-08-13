@@ -87,13 +87,13 @@ struct request_data_handler_response parse_html(struct request_data_handler_resp
 
 	document = lxb_html_document_create();
 	if (document == NULL) {
-		return make_fail_parse_response("Failed to setup HTML parser");
+		return make_fail_parse_response("设置HTML解析器失败");
 	}
 
 	status = lxb_html_document_parse(document, (const lxb_char_t *)response.body.c_str(),
 					 response.body.length());
 	if (status != LXB_STATUS_OK) {
-		return make_fail_parse_response("Failed to parse HTML");
+		return make_fail_parse_response("解析HTML失败");
 	}
 
 	std::string parsed_output = response.body;
@@ -102,7 +102,7 @@ struct request_data_handler_response parse_html(struct request_data_handler_resp
 		std::vector<std::string> found;
 		if (find_with_selectors(request_data->output_cssselector, document, found) !=
 		    LXB_STATUS_OK) {
-			return make_fail_parse_response("Failed to find element with CSS selector");
+			return make_fail_parse_response("使用CSS选择器找不到元素");
 		} else {
 			if (found.size() > 0) {
 				std::copy(found.begin(), found.end(),

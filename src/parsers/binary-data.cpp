@@ -72,7 +72,7 @@ struct request_data_handler_response parse_image_data(struct request_data_handle
 	// if the image type is not supported, return an error
 	if (image_type != "png" && image_type != "jpg" && image_type != "jpeg" &&
 	    image_type != "gif") {
-		return make_fail_parse_response("Unsupported image type: " + image_type);
+		return make_fail_parse_response("不支持的图像类型: " + image_type);
 	}
 
 	// save the image to a temporary file
@@ -94,7 +94,7 @@ struct request_data_handler_response parse_audio_data(struct request_data_handle
 	// if the audio type is not supported, return an error
 	if (!(audio_type == "mp3" || audio_type == "mpeg" || audio_type == "wav" ||
 	      audio_type == "ogg" || audio_type == "flac" || audio_type == "aac")) {
-		return make_fail_parse_response("Unsupported audio type: " + audio_type);
+		return make_fail_parse_response("不支持的音频类型: " + audio_type);
 	}
 
 	// if audio type is mpeg - change the audio type to mp3 for the filename extension

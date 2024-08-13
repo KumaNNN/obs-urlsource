@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Request Builder</string>
+   <string>请求构建器</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -56,7 +56,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Source</string>
+         <string>源</string>
         </property>
        </widget>
       </item>
@@ -94,7 +94,7 @@
          <item>
           <widget class="QRadioButton" name="fileRadioButton">
            <property name="text">
-            <string>File</string>
+            <string>文件</string>
            </property>
           </widget>
          </item>
@@ -104,7 +104,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>URL/File</string>
+         <string>URL/文件</string>
         </property>
        </widget>
       </item>
@@ -148,7 +148,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>URL Request Options</string>
+      <string>URL请求选项</string>
      </property>
      <layout class="QFormLayout" name="urlRequestLayout">
       <property name="fieldGrowthPolicy">
@@ -163,7 +163,7 @@
       <item row="4" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Method</string>
+         <string>方法</string>
         </property>
        </widget>
       </item>
@@ -202,10 +202,10 @@
          <item>
           <widget class="QCheckBox" name="checkBox_failonhttperrorcodes">
            <property name="toolTip">
-            <string>Fail on e.g. 400 HTTP codes or continue and get the response body?</string>
+            <string>失败在HTTP 400时，还继续并获取响应正文?</string>
            </property>
            <property name="text">
-            <string>Fail on HTTP error code?</string>
+            <string>失败在HTTP错误代码?</string>
            </property>
           </widget>
          </item>
@@ -226,7 +226,7 @@
           <widget class="QComboBox" name="comboBox_presets">
            <item>
             <property name="text">
-             <string>Select Preset</string>
+             <string>选择预设值</string>
             </property>
            </item>
            <item>
@@ -277,7 +277,7 @@
       <item row="6" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Headers</string>
+         <string>页眉</string>
         </property>
        </widget>
       </item>
@@ -362,21 +362,21 @@
       <item row="7" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Dynamic Input</string>
+         <string>动态输入</string>
         </property>
        </widget>
       </item>
       <item row="7" column="1">
        <widget class="QPushButton" name="pushButton_addInputs">
         <property name="text">
-         <string>Add Inputs</string>
+         <string>添加输入</string>
         </property>
        </widget>
       </item>
       <item row="10" column="0">
        <widget class="QLabel" name="label_16">
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Available functions: (for URL field above as well)&lt;/p&gt;&lt;p&gt;- {{input}} : The dynamic input&lt;/p&gt;&lt;p&gt;- {{strftime(&amp;lt;format&amp;gt;, &amp;lt;utc? true/false&amp;gt;)}} : Add a formatted time&lt;/p&gt;&lt;p&gt;- {{urlencode(var)}} : URL Encoded input&lt;/p&gt;&lt;p&gt;- {{imageb64}} : Base64 encoded image input&lt;/p&gt;&lt;p&gt;- {{seq}} : Sequential counter for requests&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可用函数: (上面的URL字段也是如此)&lt;/p&gt;&lt;p&gt;- {{input}} : 动态输入&lt;/p&gt;&lt;p&gt;- {{strftime(&amp;lt;format&amp;gt;, &amp;lt;utc? true/false&amp;gt;)}} : 添加格式化时间&lt;/p&gt;&lt;p&gt;- {{urlencode(var)}} : URL编码输入&lt;/p&gt;&lt;p&gt;- {{imageb64}} : Base64编码图像输入&lt;/p&gt;&lt;p&gt;- {{seq}} : 请求的顺序计数器&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Body&lt;/p&gt;&lt;p&gt;ℹ️&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -389,14 +389,14 @@
          <bool>false</bool>
         </property>
         <property name="placeholderText">
-         <string>Body</string>
+         <string>主体</string>
         </property>
        </widget>
       </item>
       <item row="11" column="0">
        <widget class="QCheckBox" name="sslOptionsCheckbox">
         <property name="text">
-         <string>SSL Options</string>
+         <string>SSL选项</string>
         </property>
        </widget>
       </item>
@@ -455,7 +455,7 @@
             <item>
              <widget class="QLineEdit" name="sslCertFileLineEdit">
               <property name="placeholderText">
-               <string>SSL Certificate File</string>
+               <string>SSL证书文件</string>
               </property>
              </widget>
             </item>
@@ -502,7 +502,7 @@
             <item>
              <widget class="QLineEdit" name="sslKeyFileLineEdit">
               <property name="placeholderText">
-               <string>SSL Key File</string>
+               <string>SSL密钥文件</string>
               </property>
              </widget>
             </item>
@@ -519,14 +519,14 @@
          <item>
           <widget class="QLineEdit" name="sslKeyPasswordLineEdit">
            <property name="placeholderText">
-            <string>SSL Key Password</string>
+            <string>SSL密钥密码</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="verifyPeerCheckBox">
            <property name="text">
-            <string>Verify Peer?</string>
+            <string>验证对等体?</string>
            </property>
           </widget>
          </item>
@@ -545,7 +545,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Output Parsing Options</string>
+      <string>输出解析选项</string>
      </property>
      <layout class="QFormLayout" name="formOutputParsing">
       <property name="fieldGrowthPolicy">
@@ -557,7 +557,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label_7">
         <property name="text">
-         <string>Parsing Type</string>
+         <string>解析类型</string>
         </property>
        </widget>
       </item>
@@ -565,7 +565,7 @@
        <widget class="QComboBox" name="outputTypeComboBox">
         <item>
          <property name="text">
-          <string>Text</string>
+          <string>文本</string>
          </property>
         </item>
         <item>
@@ -575,12 +575,12 @@
         </item>
         <item>
          <property name="text">
-          <string>Image (data)</string>
+          <string>图像(数据)</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Audio (data)</string>
+          <string>音频(数据)</string>
          </property>
         </item>
         <item>
@@ -590,12 +590,12 @@
         </item>
         <item>
          <property name="text">
-          <string>XML (XPath)</string>
+          <string>XML(XPath)</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>XML (XQuery)</string>
+          <string>XML(XQuery)</string>
          </property>
         </item>
         <item>
@@ -608,7 +608,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_8">
         <property name="text">
-         <string>JSON Pointer</string>
+         <string>JSON指针</string>
         </property>
        </widget>
       </item>
@@ -622,7 +622,7 @@
       <item row="3" column="0">
        <widget class="QLabel" name="label_9">
         <property name="text">
-         <string>JSON Path</string>
+         <string>JSON路径</string>
         </property>
        </widget>
       </item>
@@ -652,7 +652,7 @@
       <item row="6" column="0">
        <widget class="QLabel" name="label_12">
         <property name="text">
-         <string>Regex</string>
+         <string>正则</string>
         </property>
        </widget>
       </item>
@@ -662,7 +662,7 @@
       <item row="7" column="0">
        <widget class="QLabel" name="label_13">
         <property name="text">
-         <string>Regex Flags</string>
+         <string>正则标志</string>
         </property>
        </widget>
       </item>
@@ -672,7 +672,7 @@
       <item row="8" column="0">
        <widget class="QLabel" name="label_14">
         <property name="text">
-         <string>Regex Group</string>
+         <string>正则分组</string>
         </property>
        </widget>
       </item>
@@ -686,7 +686,7 @@
       <item row="9" column="0">
        <widget class="QLabel" name="label_17">
         <property name="text">
-         <string>CSS Selector</string>
+         <string>CSS选择器</string>
         </property>
        </widget>
       </item>
@@ -696,7 +696,7 @@
       <item row="10" column="0">
        <widget class="QLabel" name="label_15">
         <property name="text">
-         <string>Postprocess Regex</string>
+         <string>后处理正则</string>
         </property>
        </widget>
       </item>
@@ -721,7 +721,7 @@
          <item>
           <widget class="QCheckBox" name="postProcessRegexIsReplaceCheckBox">
            <property name="text">
-            <string>Replace</string>
+            <string>替换</string>
            </property>
           </widget>
          </item>
@@ -741,7 +741,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_18">
         <property name="text">
-         <string>Delimiter</string>
+         <string>分隔符</string>
         </property>
        </widget>
       </item>
@@ -754,7 +754,7 @@
       <string notr="true">QLabel { color : red; }</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>文本标签</string>
      </property>
     </widget>
    </item>
@@ -801,7 +801,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Test Request</string>
+         <string>测试请求</string>
         </property>
        </widget>
       </item>

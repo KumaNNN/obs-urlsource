@@ -45,7 +45,8 @@ url_source_data::url_source_data() : output_mapping_mutex(), curl_mutex(), curl_
 const char *url_source_name(void *unused)
 {
 	UNUSED_PARAMETER(unused);
-	return "URL Source";
+	// return "URL Source";
+	return "URL源";
 }
 
 void url_source_destroy(void *data)
@@ -247,31 +248,31 @@ obs_properties_t *url_source_properties(void *data)
 	obs_properties_t *ppts = obs_properties_create();
 	// URL input string
 	obs_property_t *urlprop =
-		obs_properties_add_text(ppts, "url", "URL / File", OBS_TEXT_DEFAULT);
+		obs_properties_add_text(ppts, "url", "URL/文件", OBS_TEXT_DEFAULT);
 	// Disable the URL input since it's setup via the Request Builder dialog
 	obs_property_set_enabled(urlprop, false);
 
 	// Add button to open the Request Builder dialog
-	obs_properties_add_button2(ppts, "setup_request_button", "Setup Data Source",
+	obs_properties_add_button2(ppts, "setup_request_button", "设置数据源",
 				   setup_request_button_click, usd);
 
 	obs_properties_add_button2(ppts, "output_mapping_and_template",
-				   "Setup Outputs and Templates",
+				   "设置输出和模板",
 				   output_mapping_and_template_button_click, usd);
 
 	// Update timer setting in milliseconds
-	obs_properties_add_int(ppts, "update_timer", "Update Timer (ms)", 100, 1000000, 100);
+	obs_properties_add_int(ppts, "update_timer", "刷新计时器(ms)", 100, 1000000, 100);
 
 	// Run timer while not visible
-	obs_properties_add_bool(ppts, "run_while_not_visible", "Run while not visible?");
+	obs_properties_add_bool(ppts, "run_while_not_visible", "在不可见的情况下运行?");
 
 	obs_properties_add_bool(ppts, "send_to_stream",
-				"Send output to current stream as captions");
+				"将输出作为字幕发送到当前流");
 
 	// Is Image URL boolean checkbox
-	obs_properties_add_bool(ppts, "is_image_url", "Output is image URL (fetch and show image)");
+	obs_properties_add_bool(ppts, "is_image_url", "输出是图像URL(获取并显示图像)");
 
-	obs_properties_add_int(ppts, "render_width", "Render Width (px)", 100, 10000, 1);
+	obs_properties_add_int(ppts, "render_width", "渲染宽度(px)", 100, 10000, 1);
 
 	// Add a informative text about the plugin
 	obs_properties_add_text(

@@ -27,7 +27,7 @@ struct request_data_handler_response parse_regex(struct request_data_handler_res
 			obs_log(LOG_INFO, "Failed to match regex");
 			// Return an error response
 			struct request_data_handler_response responseFail;
-			responseFail.error_message = "Failed to match regex";
+			responseFail.error_message = "无法匹配正则表达式";
 			responseFail.status_code = URL_SOURCE_REQUEST_PARSING_ERROR_CODE;
 			return responseFail;
 		}

@@ -86,7 +86,7 @@ void handle_nonempty_text(input_data &input, request_data_handler_response &resp
 		if (input.last_obs_text_source_value == text) {
 			// Return an error response
 			response.error_message =
-				"OBS text source value is the same as last time, skipping was requested";
+				"OBS文本源值与上次相同，请求将跳过";
 			response.status_code = URL_SOURCE_REQUEST_BENIGN_ERROR_CODE;
 			return;
 		}
@@ -136,11 +136,11 @@ void handle_nonempty_text(input_data &input, request_data_handler_response &resp
 			} else {
 				// aggregate timer has not expired, return an error response
 				response.error_message =
-					"Aggregate timer has not expired, skipping";
+					"聚合计时器尚未过期，正在跳过";
 				response.status_code = URL_SOURCE_REQUEST_BENIGN_ERROR_CODE;
 			}
 		} else {
-			response.error_message = "Aggregate to empty is requested, skipping";
+			response.error_message = "请求聚合为空，跳过";
 			response.status_code = URL_SOURCE_REQUEST_BENIGN_ERROR_CODE;
 		}
 	}
@@ -159,7 +159,7 @@ void handle_empty_text(input_data &input, request_data_handler_response &respons
 		input.agg_buffer_begin_ts = get_time_ns();
 	} else if (input.no_empty) {
 		// Return an error response
-		response.error_message = "OBS text source is empty, skipping was requested";
+		response.error_message = "OBS文本源为空，请求将跳过";
 		response.status_code = URL_SOURCE_REQUEST_BENIGN_ERROR_CODE;
 	}
 }
@@ -235,7 +235,7 @@ void put_inputs_on_json(url_source_request_data *request_data, CURL *curl,
 			if (source == NULL) {
 				obs_log(LOG_INFO, "Failed to get source by name");
 				// Return an error response
-				response.error_message = "Failed to get source by name";
+				response.error_message = "按名称获取源失败";
 				response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 				curl_easy_cleanup(curl);
 				return;
@@ -260,7 +260,7 @@ void put_inputs_on_json(url_source_request_data *request_data, CURL *curl,
 			if (rgba.empty()) {
 				obs_log(LOG_INFO, "Failed to get RGBA from source render");
 				// Return an error response
-				response.error_message = "Failed to get RGBA from source render";
+				response.error_message = "无法从源渲染中获取RGBA";
 				response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 				curl_easy_cleanup(curl);
 				return;
@@ -289,7 +289,7 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		if (!file.is_open()) {
 			obs_log(LOG_INFO, "Failed to open file");
 			// Return an error response
-			response.error_message = "Failed to open file";
+			response.error_message = "无法打开文件";
 			response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 			return response;
 		}
@@ -305,7 +305,7 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		if (request_data->url == "") {
 			obs_log(LOG_INFO, "URL is empty");
 			// Return an error response
-			response.error_message = "URL is empty";
+			response.error_message = "URL为空";
 			response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 			return response;
 		}
@@ -315,7 +315,7 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		if (!curl) {
 			obs_log(LOG_INFO, "Failed to initialize curl");
 			// Return an error response
-			response.error_message = "Failed to initialize curl";
+			response.error_message = "初始化curl失败";
 			response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 			return response;
 		}
@@ -398,7 +398,7 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		if (!hasOnlyValidURLCharacters(url)) {
 			obs_log(LOG_INFO, "URL '%s' is invalid", url.c_str());
 			// Return an error response
-			response.error_message = "URL is invalid";
+			response.error_message = "URL无效";
 			response.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 			return response;
 		}
@@ -499,7 +499,7 @@ struct request_data_handler_response request_data_handler(url_source_request_dat
 		obs_log(LOG_INFO, "Invalid output type");
 		// Return an error response
 		struct request_data_handler_response responseFail;
-		responseFail.error_message = "Invalid output type";
+		responseFail.error_message = "输出类型无效";
 		responseFail.status_code = URL_SOURCE_REQUEST_STANDARD_ERROR_CODE;
 		return responseFail;
 	}

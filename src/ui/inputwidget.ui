@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>来自</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -59,7 +59,7 @@
          <item>
           <widget class="QComboBox" name="obsTextSourceComboBox">
            <property name="toolTip">
-            <string>&quot;Select a OBS text source to use its current text in the querystring or request body as `{{input}}` or `{{imageb64}}`.&quot;</string>
+            <string>&quot;选择一个OBS文本源，将其在查询字符串或请求体中的当前文本用作 `{{input}}` 或 `{{imageb64}}`.&quot;</string>
            </property>
            <item>
             <property name="text">
@@ -77,7 +77,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Resize</string>
+            <string>调整大小</string>
            </property>
           </widget>
          </item>
@@ -128,14 +128,14 @@
          <item>
           <widget class="QCheckBox" name="obsTextSourceEnabledCheckBox">
            <property name="text">
-            <string>No empty</string>
+            <string>没有空</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="obsTextSourceSkipSameCheckBox">
            <property name="text">
-            <string>No same</string>
+            <string>没有相同</string>
            </property>
           </widget>
          </item>
@@ -155,7 +155,7 @@
          <item>
           <widget class="QCheckBox" name="aggToTarget">
            <property name="toolTip">
-            <string>Aggregate the input until empty is found, then use the aggregate value for the request.</string>
+            <string>聚合输入，直到找到空，然后为请求使用聚合值。</string>
            </property>
            <property name="text">
             <string>Agg</string>
@@ -165,11 +165,11 @@
          <item>
           <widget class="QComboBox" name="comboBox_aggTarget">
            <property name="currentText">
-            <string>to Empty</string>
+            <string>清空</string>
            </property>
            <item>
             <property name="text">
-             <string>to Empty</string>
+             <string>清空</string>
             </property>
            </item>
            <item>

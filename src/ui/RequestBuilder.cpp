@@ -121,8 +121,8 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 
 	// URL or file dialog
 	connect(ui->urlOrFileButton, &QPushButton::clicked, this, [=]() {
-		QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
-								tr("All Files (*.*)"));
+		QString fileName = QFileDialog::getOpenFileName(this, tr("打开文件"), "",
+								tr("所有文件(*.*)"));
 		if (fileName != "") {
 			ui->urlLineEdit->setText(fileName);
 		}
@@ -328,8 +328,8 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 	// SSL certificate file dialog
 	connect(ui->sslCertFileButton, &QPushButton::clicked, this, [=]() {
 		QString fileName =
-			QFileDialog::getOpenFileName(this, tr("Open SSL certificate file"), "",
-						     tr("SSL certificate files (*.pem)"));
+			QFileDialog::getOpenFileName(this, tr("打开SSL证书文件"), "",
+						     tr("SSL证书文件(*.pem)"));
 		if (fileName != "") {
 			ui->sslCertFileLineEdit->setText(fileName);
 		}
@@ -337,8 +337,8 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 
 	// SSL key file dialog
 	connect(ui->sslKeyFileButton, &QPushButton::clicked, this, [=]() {
-		QString fileName = QFileDialog::getOpenFileName(this, tr("Open SSL key file"), "",
-								tr("SSL key files (*.pem)"));
+		QString fileName = QFileDialog::getOpenFileName(this, tr("打开SSL密钥文件"), "",
+								tr("SSL密钥文件(*.pem)"));
 		if (fileName != "") {
 			ui->sslKeyFileLineEdit->setText(fileName);
 		}
@@ -406,12 +406,12 @@ RequestBuilder::RequestBuilder(url_source_request_data *request_data,
 						ui->outputJSONPointerLineEdit, true);
 			set_form_row_visibility(ui->formOutputParsing, ui->postProcessRegexLineEdit,
 						true);
-		} else if (ui->outputTypeComboBox->currentText() == "XML (XPath)") {
+		} else if (ui->outputTypeComboBox->currentText() == "XML(XPath)") {
 			set_form_row_visibility(ui->formOutputParsing, ui->outputXPathLineEdit,
 						true);
 			set_form_row_visibility(ui->formOutputParsing, ui->postProcessRegexLineEdit,
 						true);
-		} else if (ui->outputTypeComboBox->currentText() == "XML (XQuery)") {
+		} else if (ui->outputTypeComboBox->currentText() == "XML(XQuery)") {
 			set_form_row_visibility(ui->formOutputParsing, ui->outputXQueryLineEdit,
 						true);
 			set_form_row_visibility(ui->formOutputParsing, ui->postProcessRegexLineEdit,
@@ -590,7 +590,7 @@ void RequestBuilder::show_error_message(const std::string &error_message)
 	}
 	// enable the send button
 	this->ui->sendButton->setEnabled(true);
-	this->ui->sendButton->setText("Test Request");
+	this->ui->sendButton->setText("测试请求");
 }
 
 void RequestBuilder::show_response_dialog(const request_data_handler_response &response)
@@ -720,7 +720,7 @@ void RequestBuilder::show_response_dialog(const request_data_handler_response &r
 
 	// enable the send button
 	this->ui->sendButton->setEnabled(true);
-	this->ui->sendButton->setText("Test Request");
+	this->ui->sendButton->setText("测试请求");
 
 	// Resize the dialog to fit the text
 	responseDialog->adjustSize();
