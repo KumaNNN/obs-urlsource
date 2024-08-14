@@ -158,7 +158,7 @@
             <string>聚合输入，直到找到空，然后为请求使用聚合值。</string>
            </property>
            <property name="text">
-            <string>Agg</string>
+            <string>聚合</string>
            </property>
           </widget>
          </item>
